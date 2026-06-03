@@ -29,6 +29,7 @@ export type CheckIn = {
 export type TodayStatus = {
   plan_id: string;
   plan_name: string;
+  icon: string | null;
   target: number;
   unit: string;
   completed: number;

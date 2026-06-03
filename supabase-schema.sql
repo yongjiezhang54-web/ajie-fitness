@@ -77,6 +77,7 @@ create or replace function public.get_today_status(uid uuid)
 returns table (
   plan_id uuid,
   plan_name text,
+  icon text,
   target integer,
   unit text,
   completed integer,
@@ -87,6 +88,7 @@ begin
   select
     tp.id as plan_id,
     tp.name as plan_name,
+    tp.icon,
     tp.target,
     tp.unit,
     coalesce(ci.completed, 0) as completed,
